@@ -1,7 +1,8 @@
 const appId = "0031bdb3";
 const appKey = "1eef12f633798f1b3f0427e9c6e39525";
-const api = "https://api.tmb.cat/v1/ibus/stops/2775?";
-fetch(`${api}app_id=${appId}&app_key=${appKey}`)
+const codiParada = "2775";
+const api = "https://api.tmb.cat/v1/ibus/stops/";
+fetch(`${api}${codiParada}?app_id=${appId}&app_key=${appKey}`)
   .then((response) => response.json())
   .then((dades) => {
     const tempsAutobus = dades.data.ibus[0];
